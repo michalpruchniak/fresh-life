@@ -85,6 +85,7 @@ nav{
 
 #our-services{
   padding-top: 80px;
+  padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap-reverse;
   min-height: 70vh;
@@ -94,6 +95,7 @@ nav{
     display: flex;
     flex-direction: column;
     padding-top:: 5%;
+    position: relative;
     .feature{
       display: flex;
       height: 72px;
@@ -119,7 +121,8 @@ nav{
   }
   #our-services-header{
     position: relative;
-    min-height: 250px;
+
+     min-height: 250px;
     h1{
       position: absolute;
       width: 100%;
@@ -130,8 +133,8 @@ nav{
       z-index: 10;
     }
     img{
-      position: absolute;
-      left: 50%;
+      position: relative;
+      margin-left: 50%;
       transform: translateX(-50%);
     }
   }
