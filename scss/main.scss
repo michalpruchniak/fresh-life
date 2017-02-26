@@ -1,0 +1,121 @@
+@import url('https://www.fontify.me/wf/294924b34e5b0346b73bbec5387f0777');
+@import 'media';
+
+*{
+  padding: 0;
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+nav{
+  position: fixed;
+  width: 100vw;
+  height: 125px;
+  background-color: transparent;
+  img{
+    margin-left: 10%;
+    margin-top: 40px;
+  }
+}
+.section{
+  width: 100vw;
+  box-sizing: border-box;
+}
+#fresh-life{
+  min-height: 100vh;
+  background-image: url("../img/fresh-life-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;;
+  h1{
+    font-family: 'font37478';
+    font-weight: bold;
+    font-size: 3.6em;
+  }
+  p{
+    width: 320px;
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.6em;
+  }
+  #get-free{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #ff6033;
+    border: 0;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+  }
+  #scroll{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#about-us{
+  padding-bottom: 100px;
+  background-color: #00b2b2;
+  min-height: 70vh;
+  padding-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  #about-us-desc{
+    padding-top: 6%;
+    color: #FFF;
+    h1{
+      font-family: 'font37478';
+      font-size: 3.6em;
+      color: #FFF;
+    }
+    p{
+      margin-top: 8px;
+      line-height:1.6em;
+    }
+  }
+}
+
+#our-services{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  background-color: #70bfff;
+  #our-features{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 2%;
+    .feature{
+      display: flex;
+      margin-left: 100px;
+      height: 72px;
+      width: 300px;
+      box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+      background-color: #FFF;
+      margin-bottom: 20px;
+      overflow: hidden;
+      span{
+        padding-top: 25px;
+        height: 72px;
+        width: 200px;
+        font-size: 17px;
+        text-align: center;
+        margin-right: 15px;
+        border-right: solid 1px #000;
+      }
+      img{
+        transform: scale(0.8);
+      }
+    }
+  }
+  #our-services-header{
+    min-height: 300px;
+  }
+}
