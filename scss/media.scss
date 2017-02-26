@@ -23,6 +23,7 @@
         width: 60%;
       }
     }
+
   }
 
   #our-features{
@@ -30,6 +31,13 @@
   }
   #our-services-header{
     width: 55%;
+    h1{
+      font-size: 5em;
+    }
+    img{
+      width: 60%;
+      height: auto;
+    }
   }
 }
 
@@ -61,8 +69,19 @@
 
   #our-features{
     width: 100%;
+    .feature{
+      font-size: 4em;
+    }
   }
   #our-services-header{
     width: 100%;
+    h1{
+      font-size: 2.8em;
+    }
+    img{
+      left: 50%;
+      width: 40%;
+      height: auto;
+    }
   }
 }
