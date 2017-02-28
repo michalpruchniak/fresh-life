@@ -1,6 +1,6 @@
 @media (min-width: 800px){
   .section{
-    padding-left: 10%
+    padding-left: 10%;
   }
   #fresh-life{
     padding-top: 270px;
@@ -39,6 +39,35 @@
       height: auto;
     }
   }
+
+  //gallery
+  #gallery{
+    #gallery-container{
+      width: 1000px;
+    }
+    #row-header{
+      min-height: 400px;
+      #main-photo{
+        width: 600px;
+        img{
+          width: 600px;
+          height: auto;
+        }
+      }
+      #addictional-photo{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        img{
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+  }
+
 }
 
 @media (max-width: 800px){
@@ -81,6 +110,16 @@
     img{
       width: 40%;
       height: auto;
+    }
+  }
+
+  #gallery{
+    #gallery-container{
+      img{
+        width: 100vw;
+        height: auto;
+        margin-bottom: 10px;
+      }
     }
   }
 }

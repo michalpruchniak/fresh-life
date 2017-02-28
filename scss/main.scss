@@ -1,6 +1,10 @@
 @import url('https://www.fontify.me/wf/294924b34e5b0346b73bbec5387f0777');
 @import 'media';
 $font-header: 'font37478';
+@mixin paragraph-style(){
+  margin-top: 20px;
+  line-height: 1.6em;
+}
 
 *{
   padding: 0;
@@ -39,8 +43,7 @@ nav{
   p{
     width: 320px;
     text-align: justify;
-    margin-top: 20px;
-    line-height: 1.6em;
+    @include paragraph-style();
   }
   #get-free{
     width: 200px;
@@ -136,6 +139,33 @@ nav{
       position: relative;
       margin-left: 50%;
       transform: translateX(-50%);
+    }
+  }
+}
+
+#gallery{
+  min-height: 110vh;
+  background-color: #ffe92f;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  text-align: center;
+  h1{
+    font-family: $font-header;
+    font-size: 3.6em;
+  }
+  p{
+    font-size: 20px;
+    @include paragraph-style();
+    margin-bottom: 2%;
+  }
+  #gallery-container{
+    margin: 0 auto;
+    #row-header{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    img{
+      box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
     }
   }
 }
