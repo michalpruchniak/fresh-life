@@ -5,6 +5,17 @@ $font-header: 'font37478';
   margin-top: 20px;
   line-height: 1.6em;
 }
+@mixin button($bg, $color){
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: $bg;
+  border: 0;
+  color: $color;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+}
 
 *{
   padding: 0;
@@ -46,15 +57,7 @@ nav{
     @include paragraph-style();
   }
   #get-free{
-    width: 200px;
-    height: 50px;
-    margin-top: 10px;
-    background-color: #ff6033;
-    border: 0;
-    color: #FFF;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+    @include button(#ff6033, #FFF);
   }
   #scroll{
     position: absolute;
@@ -148,24 +151,37 @@ nav{
   background-color: #ffe92f;
   padding-top: 45px;
   padding-bottom: 60px;
-  text-align: center;
   h1{
     font-family: $font-header;
     font-size: 3.6em;
+    text-align: center;
   }
   p{
     font-size: 20px;
     @include paragraph-style();
     margin-bottom: 2%;
+    text-align: center;
   }
   #gallery-container{
     margin: 0 auto;
-    #row-header{
-      display: flex;
-      flex-wrap: wrap;
-    }
     img{
       box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
     }
+    #gallery-header{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;;
+      #addictional-photo{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+      }
+    }
+  }
+  .view-more{
+    display: block;
+    @include button(#5585a2, #FFF);
+    margin: 0 auto;
+    margin-top: 60px;
   }
 }

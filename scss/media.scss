@@ -1,3 +1,41 @@
+//gallery
+@media (max-width: 1200px){
+  #gallery-container{
+    img{
+      width: 100vw;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (min-width: 1200px){
+  #gallery-container{
+    max-width: 1200px;
+  }
+  #gallery-header{
+    #main-photo{
+      img{
+        height: 560px;
+      }
+    }
+    #addictional-photo{
+      padding-bottom: 5px;
+      img{
+        height: 260px;
+      }
+    }
+  }
+  .gallery-row{
+    img{
+      width: 570px;
+      height: auto;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+}
+
 @media (min-width: 800px){
   .section{
     padding-left: 10%;
@@ -40,34 +78,6 @@
     }
   }
 
-  //gallery
-  #gallery{
-    #gallery-container{
-      width: 1000px;
-    }
-    #row-header{
-      min-height: 400px;
-      #main-photo{
-        width: 600px;
-        img{
-          width: 600px;
-          height: auto;
-        }
-      }
-      #addictional-photo{
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        img{
-          width: 300px;
-          height: auto;
-        }
-      }
-    }
-  }
-
 }
 
 @media (max-width: 800px){
@@ -102,6 +112,7 @@
       font-size: 4em;
     }
   }
+  
   #our-services-header{
     width: 100%;
     h1{
@@ -113,13 +124,4 @@
     }
   }
 
-  #gallery{
-    #gallery-container{
-      img{
-        width: 100vw;
-        height: auto;
-        margin-bottom: 10px;
-      }
-    }
-  }
 }
