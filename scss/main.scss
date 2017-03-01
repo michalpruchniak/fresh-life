@@ -1,4 +1,5 @@
 @import url('https://www.fontify.me/wf/294924b34e5b0346b73bbec5387f0777');
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import 'media';
 $font-header: 'font37478';
 @mixin paragraph-style(){
@@ -183,5 +184,31 @@ nav{
     @include button(#5585a2, #FFF);
     margin: 0 auto;
     margin-top: 60px;
+  }
+}
+
+#subscribe{
+  min-height: 48vh;
+  background-image: url("../img/sub-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  h1{
+    font-family: 'Concert One', cursive;
+    font-weight: 80;
+    font-size: 2.5em;
+    margin-top: 10%;
+  }
+  p{
+    @include paragraph-style();
+    max-width: 500px;
+    margin: 40px 0;
+  }
+  // input:-moz-placeholder {color: #00cc00}
+  // input::-webkit-input-placeholder {color: #00cc00}
+  input[type="text"]{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #464646;
+    padding-left: 15px;
   }
 }
