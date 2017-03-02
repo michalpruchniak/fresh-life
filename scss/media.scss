@@ -36,6 +36,8 @@
   }
 }
 
+
+
 @media (min-width: 800px){
   .section{
     padding-left: 10%;
@@ -78,6 +80,12 @@
     }
   }
 
+  #blog{
+    p{
+      width: 40%;
+      text-align: center;
+    }
+  }
 }
 
 @media (max-width: 800px){
@@ -112,7 +120,7 @@
       font-size: 4em;
     }
   }
-  
+
   #our-services-header{
     width: 100%;
     h1{
@@ -121,6 +129,13 @@
     img{
       width: 40%;
       height: auto;
+    }
+  }
+
+  #blog{
+    p{
+      width: 90%;
+      text-align: justify;
     }
   }
 

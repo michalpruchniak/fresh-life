@@ -188,10 +188,12 @@ nav{
 }
 
 #subscribe{
-  min-height: 38vh;
+  min-height: 42vh;
   background-image: url("../img/sub-bg.png");
   background-position: 40% 0;
   background-repeat: no-repeat;
+  padding-bottom: 150px;
+
   h1{
     font-family: 'Concert One', cursive;
     font-weight: 80;
@@ -205,12 +207,29 @@ nav{
   }
 
   input[type="text"]{
-    width: 550px;
+    width: 500px;
     height: 50px;
     border: 1px solid #464646;
     padding-left: 15px;
   }
   input[type="submit"]{
     @include button(#97BA2C, #FFF);
+  }
+}
+
+#blog{
+  min-height: 70vh;
+  padding: 5% 0;
+  background-color: #b07cf8;
+  h1{
+    font-family: $font-header;
+    font-weight: bold;
+    font-size: 3.6em;
+    text-align: center;
+  }
+  p{
+    @include paragraph-style();
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
