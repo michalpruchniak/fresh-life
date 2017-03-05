@@ -7,7 +7,8 @@ $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
   margin-top: 20px;
   line-height: 1.6em;
 }
-@mixin button($bg, $color){
+@mixin button($bg, $color, $color-hover){
+  position: relative;
   width: 200px;
   height: 50px;
   margin-top: 10px;
@@ -17,6 +18,35 @@ $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
   font-size: 20px;
   cursor: pointer;
   box-shadow: $box-shadow;
+  overflow: hidden;
+  span{
+    width: 100%;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 99999999999;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 50px;
+    height: 60px;
+    background-color: $color-hover;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 90%;
+    transition: .4s;
+    z-index: 4;
+    opacity: 0;
+  }
+  &:hover::after{
+    top: -20px;
+    width: 250px;
+    height: 100px;
+    opacity: 0.9;
+  }
 }
 
 *{
@@ -59,7 +89,7 @@ nav{
     @include paragraph-style();
   }
   #get-free{
-    @include button(#ff6033, #FFF);
+    @include button(#ff6033, #FFF, #f88d71);
   }
   #scroll{
     position: absolute;
@@ -182,7 +212,7 @@ nav{
   }
   .view-more{
     display: block;
-    @include button(#5585a2, #FFF);
+    @include button(#5585a2, #FFF, #709dba);
     margin: 0 auto;
     margin-top: 60px;
   }
@@ -213,8 +243,8 @@ nav{
     border: 1px solid #464646;
     padding-left: 15px;
   }
-  input[type="submit"]{
-    @include button(#97BA2C, #FFF);
+  button{
+    @include button(#97BA2C, #FFF, #b5d554);
   }
 }
 
@@ -306,7 +336,7 @@ nav{
   }
   .blog-button{
     display: block;
-    @include button(#f72b3b, #FFF);
+    @include button(#f72b3b, #FFF, #f96872);
     margin: 0 auto;
     margin-top: 60px;
   }
@@ -356,19 +386,19 @@ nav{
           border-left: 6px solid rgba(53, 91, 160, 0.5);
           font-weight: bold;
         }
-        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        &::-webkit-input-placeholder { 
           color: #FFF;
           font-size: 15px;
         }
-        &::-o-input-placeholder { /* Chrome/Opera/Safari */
+        &::-o-input-placeholder {
           color: #FFF;
           font-size: 15px;
         }
-        &::-moz-input-placeholder { /* Chrome/Opera/Safari */
+        &::-moz-input-placeholder {
           color: #FFF;
           font-size: 15px;
         }
-        &::-ms-input-placeholder { /* Chrome/Opera/Safari */
+        &::-ms-input-placeholder {
           color: #FFF;
           font-size: 15px;
         }
