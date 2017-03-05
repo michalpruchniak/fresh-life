@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import 'media';
 $font-header: 'font37478';
+$box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
 @mixin paragraph-style(){
   margin-top: 20px;
   line-height: 1.6em;
@@ -15,7 +16,7 @@ $font-header: 'font37478';
   color: $color;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+  box-shadow: $box-shadow;
 }
 
 *{
@@ -107,7 +108,7 @@ nav{
       display: flex;
       height: 72px;
       width: 320px;
-      box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+      box-shadow: $box-shadow;
       background-color: #FFF;
       margin: 0 auto;
       margin-bottom: 20px;
@@ -166,7 +167,7 @@ nav{
   #gallery-container{
     margin: 0 auto;
     img{
-      box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
+      box-shadow: $box-shadow;
     }
     #gallery-header{
       display: flex;
@@ -224,12 +225,161 @@ nav{
   h1{
     font-family: $font-header;
     font-weight: bold;
-    font-size: 3.6em;
+    font-size: 4.8em;
     text-align: center;
   }
   p{
     @include paragraph-style();
     margin: 0 auto;
     margin-top: 20px;
+  }
+  #post-container{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .post{
+      position: relative;
+      width: 370px;
+      height: 310px;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: red;
+      margin-left: 10px;
+      box-shadow: $box-shadow;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover img{
+        transform: scale(1.1);
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+        z-index: 2;
+      }
+      .date{
+        box-sizing: content-box;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        padding: 6px;
+        text-align: center;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 25px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        z-index: 3;
+      }
+      h2{
+        z-index: 12;
+        position: relative;
+        margin-top: 53%;
+      }
+      span{
+        display: block;
+        position: relative;
+        margin-top: 15px;
+        color: #FFF;
+        opacity: 1;
+        font-size: 15px;
+        z-index: 12;
+      }
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s linear;
+      }
+    }
+  }
+  .blog-button{
+    display: block;
+    @include button(#f72b3b, #FFF);
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+}
+#contact{
+  min-height: 90vh;
+  background-image: url("../img/contact-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5% 0;
+  h1{
+    text-align: center;
+    font-family: $font-header;
+    color: #333;
+  }
+  p{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 19px;
+    max-width: 400px;
+    padding: 0 20px 0 20px;
+    @include paragraph-style();
+  }
+  #contact-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 30px;
+    #form, #address{
+      min-height: 350px;
+    }
+    #form{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      input[type="text"], textarea{
+        display: block;
+        box-sizing: border-box;
+        background-color: rgba(0, 196, 196, 0.5);
+        color: #FFF;
+        padding-left: 10px;
+        border: none;
+        &:focus{
+          border-left: 6px solid rgba(53, 91, 160, 0.5);
+          font-weight: bold;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #FFF;
+          font-size: 15px;
+        }
+        &::-o-input-placeholder { /* Chrome/Opera/Safari */
+          color: #FFF;
+          font-size: 15px;
+        }
+        &::-moz-input-placeholder { /* Chrome/Opera/Safari */
+          color: #FFF;
+          font-size: 15px;
+        }
+        &::-ms-input-placeholder { /* Chrome/Opera/Safari */
+          color: #FFF;
+          font-size: 15px;
+        }
+      }
+      textarea{
+        padding: 15px;
+      }
+    }
+    #address{
+      span{
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
