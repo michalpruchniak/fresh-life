@@ -49,6 +49,22 @@ $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
   }
 }
 
+@mixin active-link($width, $transition){
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f88d71;
+    transition: $transition;
+  }
+
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -62,12 +78,43 @@ body{
 nav{
   position: fixed;
   width: 100vw;
-  height: 125px;
+  height: 100px;
   background-color: transparent;
+  z-index: 999;
+  transition: .6s;
   img{
-    margin-left: 10%;
-    margin-top: 40px;
+    margin-left: 60px;
+    margin-top: 25px;
   }
+  ul{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+  }
+  li{
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    padding: 20px;
+
+    a{
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      @include active-link(0, .3s);
+      transition: .3s;
+      &:hover::after{
+        width: 100%;
+      }
+      &.active{
+        @include active-link(100%, .3s)
+      }
+    }
+
+  }
+}
+.scroll-nav{
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .section{
   width: 100vw;
@@ -219,17 +266,17 @@ nav{
 }
 
 #subscribe{
-  min-height: 42vh;
+  min-height: 450px;
   background-image: url("../img/sub-bg.png");
   background-position: 40% 0;
   background-repeat: no-repeat;
   padding-bottom: 150px;
+  padding-top: 5%;
 
   h1{
     font-family: 'Concert One', cursive;
     font-weight: 80;
     font-size: 2.5em;
-    margin-top: 10%;
   }
   p{
     @include paragraph-style();
@@ -342,7 +389,7 @@ nav{
   }
 }
 #contact{
-  min-height: 90vh;
+  min-height: 100vh;
   background-image: url("../img/contact-bg.png");
   background-position: center;
   background-size: cover;
@@ -386,7 +433,7 @@ nav{
           border-left: 6px solid rgba(53, 91, 160, 0.5);
           font-weight: bold;
         }
-        &::-webkit-input-placeholder { 
+        &::-webkit-input-placeholder {
           color: #FFF;
           font-size: 15px;
         }
