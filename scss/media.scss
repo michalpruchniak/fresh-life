@@ -1,5 +1,8 @@
 //gallery
 @media (max-width: 1200px){
+  #classic-menu{
+    display: none;
+  }
   #gallery-container{
     img{
       width: 100vw;
@@ -9,6 +12,10 @@
   }
 }
 @media (min-width: 1200px){
+  
+  #rwd-menu{
+    display: none;
+  }
   #gallery-container{
     max-width: 1200px;
   }

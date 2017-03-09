@@ -86,31 +86,73 @@ nav{
     margin-left: 60px;
     margin-top: 25px;
   }
-  ul{
+  ul#classic-menu{
     position: absolute;
     top: 20px;
     right: 10%;
-  }
-  li{
-    position: relative;
-    display: inline-block;
-    height: 50px;
-    padding: 20px;
+    li{
+      position: relative;
+      display: inline-block;
+      height: 50px;
+      padding: 20px;
 
-    a{
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      @include active-link(0, .3s);
-      transition: .3s;
-      &:hover::after{
-        width: 100%;
+      a{
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        @include active-link(0, .3s);
+        transition: .3s;
+        &:hover::after{
+          width: 100%;
+        }
+        &.active{
+          @include active-link(100%, .3s)
+        }
       }
-      &.active{
-        @include active-link(100%, .3s)
+
+    }
+  }
+
+  ol#rwd-menu{
+    .fa-bars{
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.8em;
+      text-align: center;
+      &.close-menu{
+        & ~ ul{
+          //visibility: hidden;
+        }
       }
     }
 
+    &>ul{
+      display: block;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding-bottom: 15px;
+      width: 100vw;
+      top: 100px;
+      a{
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        width: 100vw;
+        height: 50px;
+        line-height: 50px;
+        &:hover{
+          background-color: orange;
+        }
+        &.rwd-active{
+          background-color: orange;
+        }
+      }
+    }
   }
 }
 .scroll-nav{
