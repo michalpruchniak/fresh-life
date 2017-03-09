@@ -13,11 +13,16 @@ var scrollMe = (function(){
 
       function animate(){
         var pos = document.querySelector("body").scrollTop;
-        if(returnElementsPosition(where) < 0 ){
-          clearInterval(interval);
-        } else {
-          pos += 38;
+        if(returnElementsPosition(where)>20){
+            pos += 20;
+            window.scrollTo(undefined, pos);
+            console.log(returnElementsPosition(where));
+        } else if(returnElementsPosition(where)<-20){
+          pos -= 20;
           window.scrollTo(undefined, pos);
+          console.log(returnElementsPosition(where));
+        } else {
+          clearInterval(interval);
         }
       }
   }
@@ -28,5 +33,5 @@ var scrollMe = (function(){
 })();
 
 document.addEventListener("click", function(){
-  scrollMe.moveTo("contact");
+  scrollMe.moveTo("about-us");
 });
