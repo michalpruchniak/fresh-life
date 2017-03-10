@@ -56,3 +56,11 @@ for(i = 0; i<=1; i++){
     scrollMe.scrollTo("contact", 500);
   });
 }
+
+document.querySelector(".fa-bars").addEventListener("click", function(){
+  this.classList.toggle("close-menu");
+});
+
+document.querySelector("#rwd-menu ul").addEventListener("click", function(){
+  document.querySelector(".fa-bars").classList.toggle("close-menu");
+});
