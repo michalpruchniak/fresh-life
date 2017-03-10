@@ -119,13 +119,12 @@ nav{
       position: absolute;
       cursor: pointer;
       top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 10%;
       font-size: 2.8em;
       text-align: center;
       &.close-menu{
         & ~ ul{
-          //visibility: hidden;
+        visibility: hidden;
         }
       }
     }

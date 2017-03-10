@@ -54,7 +54,7 @@ var activeLink = (function() {
 
 
 
-var tablica = [
+var sections = [
   "fresh-life",
   "about-us",
   "our-services",
@@ -64,5 +64,5 @@ var tablica = [
 ];
 document.addEventListener("scroll",function(){
   activeLink.navbarColor();
-  activeLink.selectLink(tablica);
+  activeLink.selectLink(sections);
 });
