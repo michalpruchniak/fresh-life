@@ -3,6 +3,7 @@ var flashImage = (function(){
 
   var closeImage = function(){
     backgroundEl[0].remove();
+    document.body.style.overflowY = "scroll";
   }
 
   var showImage = function(el){
@@ -13,6 +14,7 @@ var flashImage = (function(){
       image.setAttribute("src", el);
       background.appendChild(image);
       document.body.appendChild(background);
+      document.body.style.overflow = "hidden";
   }
 
   var flashIt = function(el){
@@ -32,4 +34,5 @@ var flashImage = (function(){
     flashIt : flashIt
   }
 })();
+
 flashImage.flashIt("flash-gallery");
