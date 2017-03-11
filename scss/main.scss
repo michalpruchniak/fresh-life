@@ -1,6 +1,7 @@
 @import url('https://www.fontify.me/wf/294924b34e5b0346b73bbec5387f0777');
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import 'media';
+@import 'flashImage';
 $font-header: 'font37478';
 $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
 @mixin paragraph-style(){
@@ -288,6 +289,7 @@ nav{
   #gallery-container{
     margin: 0 auto;
     img{
+      cursor: pointer;
       box-shadow: $box-shadow;
     }
     #gallery-header{
