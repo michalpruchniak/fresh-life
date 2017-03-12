@@ -10,9 +10,25 @@
       margin-bottom: 20px;
     }
   }
+  #subscribe{
+    p{
+      padding: 9px;
+    }
+    input[type="text"]{
+      width: 87vw;
+    }
+  }
+  footer{
+    li{
+      display: none;
+    }
+    li:last-child{
+      display: block;
+    }
+  }
 }
 @media (min-width: 1200px){
-  
+
   #rwd-menu{
     display: none;
   }
@@ -40,6 +56,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+  }
+  #subscribe{
+    input[type="text"]{
+      width: 500px;
+    }
   }
 }
 
@@ -88,7 +109,6 @@
   }
 
   #blog{
-    color: #FFF;
     p{
       width: 40%;
       text-align: center;
@@ -199,7 +219,7 @@
       }
     }
     #address{
-      padding-left: 10px;
+      display: none;
     }
   }
 }
