@@ -73,7 +73,7 @@ $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
 div{
   box-sizing: border-box;
 }
-body{
+html, body{
   overflow-x: hidden;
 }
 nav{
@@ -166,7 +166,7 @@ nav{
   box-sizing: border-box;
 }
 #fresh-life{
-  min-height: 100vh;
+  position: relative;
   background-image: url("../img/fresh-life-bg.png");
   background-size: cover;
   background-repeat: no-repeat;;
@@ -183,12 +183,12 @@ nav{
   #get-free{
     @include button(#ff6033, #FFF, #f88d71);
   }
-  #scroll{
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // #scroll{
+  //   position: absolute;
+  //   bottom: 60px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
 }
 
 #about-us{

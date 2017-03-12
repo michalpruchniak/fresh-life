@@ -71,8 +71,15 @@
     padding-left: 10%;
   }
   #fresh-life{
+    min-height: 100vh;
     padding-top: 270px;
     background-position: center;
+    #scroll{
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   #about-us{
     #photo-plate{
@@ -147,8 +154,15 @@
     padding-left: 3%
   }
   #fresh-life{
+    min-height: 105vh;
     padding-top: 220px;
     background-position: 30% 20%;
+    #scroll{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   #about-us{
     #photo-plate{
