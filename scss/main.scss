@@ -70,7 +70,7 @@ $box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
   padding: 0;
   margin: 0;
 }
-div{
+div, section{
   box-sizing: border-box;
 }
 html, body{
@@ -79,20 +79,20 @@ html, body{
 nav{
   position: fixed;
   width: 100vw;
-  height: 100px;
+  height: 75px;
   background-color: transparent;
   z-index: 999;
   transition: .6s;
   img{
     margin-left: 60px;
-    margin-top: 25px;
+    margin-top: 8px;
   }
   a{
     cursor: pointer;
   }
   ul#classic-menu{
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 10%;
     li{
       position: relative;
@@ -122,7 +122,7 @@ nav{
       display: block;
       position: absolute;
       cursor: pointer;
-      top: 10px;
+      top: 8px;
       right: 10%;
       font-size: 2.8em;
       text-align: center;
@@ -161,7 +161,7 @@ nav{
 .scroll-nav{
   background-color: rgba(255, 255, 255, 0.9);
 }
-.section{
+section{
   width: 100vw;
   box-sizing: border-box;
 }
@@ -460,7 +460,7 @@ nav{
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 30px;
-    #form, #address{
+    #form, a{
       min-height: 350px;
       margin-top: 20px;
     }
@@ -500,7 +500,7 @@ nav{
         padding: 15px;
       }
     }
-    #address{
+    address{
       span{
         display: block;
         margin-bottom: 20px;

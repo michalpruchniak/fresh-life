@@ -1,33 +1,14 @@
 var scrollMe = (function(){
-
-  var nav = document.querySelector("nav"),
-      navHeight = nav.offsetHeight-5,
-
-  checkElementPosition = function(element){
-    var element = document.getElementById(element),
-        rect = element.getBoundingClientRect();
-    return (rect.top - navHeight) + window.pageYOffset;
-
-  },
-
-  scrollTo = function(element, duration){
-    var to = checkElementPosition(element),
-      topPosition = document.body;
-    if (duration <= 0) return;
-      var difference = to - topPosition.scrollTop,
-          perTick = difference / duration * 10;
-
-    setTimeout(function() {
-        topPosition.scrollTop = topPosition.scrollTop + perTick;
-        if (topPosition.scrollTop === to) return;
-        scrollTo(element, duration - 10);
-    }, 10);
+  var scrollTo = function(element){
+    "use strict"
+  var elmnt = document.getElementById(element);
+  elmnt.scrollIntoView({behavior: 'smooth'});
   }
-
   return {
     scrollTo: scrollTo
   }
 })();
+
 
 var home = document.querySelectorAll(".home");
     about = document.querySelectorAll(".about"),
@@ -39,22 +20,22 @@ var home = document.querySelectorAll(".home");
 
   for(i = 0; i<=1; i++){
     home[i].addEventListener("click", function(){
-      scrollMe.scrollTo("fresh-life", 500);
+      scrollMe.scrollTo("fresh-life");
     });
     about[i].addEventListener("click", function(){
-      scrollMe.scrollTo("about-us", 500);
+      scrollMe.scrollTo("about-us");
     });
     services[i].addEventListener("click", function(){
-      scrollMe.scrollTo("our-services", 500);
+      scrollMe.scrollTo("our-services");
     });
     gallery[i].addEventListener("click", function(){
-      scrollMe.scrollTo("gallery", 500);
+      scrollMe.scrollTo("gallery");
     });
     blog[i].addEventListener("click", function(){
-      scrollMe.scrollTo("blog", 500);
+      scrollMe.scrollTo("blog");
     });
     contact[i].addEventListener("click", function(){
-      scrollMe.scrollTo("contact", 500);
+      scrollMe.scrollTo("contact");
     });
   }
 

@@ -9,7 +9,7 @@ var activeLink = (function() {
 
 
   scrollPosition = function(){
-    return document.querySelector("body").scrollTop;
+    return window.pageYOffset;
   },
 
   clearClass = function(){
