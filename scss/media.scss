@@ -11,6 +11,7 @@
     }
   }
   #subscribe{
+    padding-left: 3%;
     p{
       padding: 9px;
     }
@@ -67,9 +68,6 @@
 
 
 @media (min-width: 800px){
-  section{
-    padding-left: 10%;
-  }
   #fresh-life{
     min-height: 100vh;
     padding-top: 270px;
@@ -115,7 +113,9 @@
       height: auto;
     }
   }
-
+  #subscribe{
+    padding-left: 10%;
+  }
   #blog{
     p{
       width: 40%;
@@ -151,9 +151,7 @@
 }
 
 @media (max-width: 800px){
-  section{
-    padding-left: 3%
-  }
+
   #fresh-life{
     min-height: 105vh;
     padding-top: 220px;
